@@ -3,6 +3,12 @@ class MadLib:
     inputs = []
     required = []
 
+    def print_madlib(self):
+        for member in self.required:
+            self.inputs.append(input("Enter a %s: " % member))
+
+        print(self.story % tuple(self.inputs))
+
 
 piranha_river = MadLib()
 piranha_river.story = "If you are traveling in %s and find yourself having to cross a piranha-filled river, " \
